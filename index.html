@@ -1199,7 +1199,7 @@
               </div>
 
               <!-- BAGIAN 4: UPLOAD BERKAS -->
-              <div class="section-title">4. Upload Dokumen (Maks 2MB)</div>
+              <div class="section-title">4. Upload Dokumen (Maks 10MB)</div>
               <div class="row g-3 mb-4">
                 <div class="col-md-12 mb-2">
                   <label class="form-label small fw-semibold text-danger">Foto Diri (Background Merah) * Wajib JPG/PNG</label>
@@ -1346,7 +1346,7 @@
           let fileEl = document.getElementById(c.el);
           if (fileEl && fileEl.files.length > 0) {
             let file = fileEl.files[0];
-            if (file.size > 2 * 1024 * 1024) throw new Error("Ukuran file melebihi batas 2MB!");
+            if (file.size > 10 * 1024 * 1024) throw new Error("Ukuran file melebihi batas 10MB!");
             
             let p = new Promise((resolve) => {
               let fr = new FileReader();
