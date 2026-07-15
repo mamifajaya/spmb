@@ -279,7 +279,7 @@
   <!-- CUSTOM SCRIPTS -->
   <script>
     // MASUKKAN URL WEB APP GAS ANDA DI SINI
-    const API_URL = "https://script.google.com/macros/s/AKfycbwa-lyP1VK0uVol5WWCQVLiZjN5Y90AFat6idczSen5IriG5PCxXi31WqHT1g-LPlzguw/exec"; // <-- GANTI DENGAN URL EXEC ANDA YANG SEBENARNYA
+    const API_URL = "https://script.google.com/macros/s/AKfycbwZyOwcoM1ISmeKBwN-bo805zOmh2i2fLaW1w3sxwAZlgNgXvlNiHVois2tZqB07is0ag/exec"; // <-- GANTI DENGAN URL EXEC ANDA YANG SEBENARNYA
 
     // GLOBAL STATE
     var currentUser = null;
@@ -1199,7 +1199,7 @@
               </div>
 
               <!-- BAGIAN 4: UPLOAD BERKAS -->
-              <div class="section-title">4. Upload Dokumen (Maks 10MB)</div>
+              <div class="section-title">4. Upload Dokumen</div>
               <div class="row g-3 mb-4">
                 <div class="col-md-12 mb-2">
                   <label class="form-label small fw-semibold text-danger">Foto Diri (Background Merah) * Wajib JPG/PNG</label>
@@ -1346,7 +1346,6 @@
           let fileEl = document.getElementById(c.el);
           if (fileEl && fileEl.files.length > 0) {
             let file = fileEl.files[0];
-            if (file.size > 10 * 1024 * 1024) throw new Error("Ukuran file melebihi batas 10MB!");
             
             let p = new Promise((resolve) => {
               let fr = new FileReader();
